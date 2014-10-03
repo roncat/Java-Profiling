@@ -36,3 +36,9 @@ Java-Profiling
             jmap <pid>
             
             
+  JMAP - Java Virtual Machine Memory Map
+    Requirements:
+      - JDK
+          /bin/jmap
+            jmap <pid>
+            
