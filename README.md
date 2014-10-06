@@ -13,20 +13,17 @@ Java-Profiling
     Requirements:
       - JDK1.7.0_67 or later
             /bin/jmc.ini 
-                
             /bin/jmc (sh)
     
   JPS - Java Virtual Machine Proccess Status Tool
     Requirements:
       - JDK
-          /bin/jps
-            jps -mlv <pid>
-    
+          /bin/jps -mlv <pid>
+           
   JINFO - Java Virtual Machine Configuration Info
     Requirements:
       - JDK
-          /bin/jinfo
-            jinfo <pid>
+          /bin/jinfo <pid>
             
   JMAP - Java Virtual Machine Memory Map
     Requirements:
@@ -37,26 +34,23 @@ Java-Profiling
     JHAT - Java Heap Analysis Tool
     Requirements:
       - JDK
-          /bin/jhat
-            jhat -J-Xmx256m arquivo.hprof 
+          /bin/jhat -J-Xmx256m arquivo.hprof 
             
   JSTAT - Java Virtual Machine Statistics Monitoring Tools
     Requirements:
       - JDK
-          /bin/jstat 
-            jstat -gccause <pid> [-class | -gc | -gcutil | -gcoldcapacity]
+          /bin/jstat -gccause <pid> [-class | -gc | -gcutil | -gcoldcapacity]
+          exemplo: jstat -gc -t  19485 1s 30  ("jstat" to collect 30 samples with an interval of 1 second)
             
   JSTACK - Java Stack Trace Threads
     Requirements:
       - JDK
-          /bin/jstack
-            jstack <pid> 
+          /bin/jstack <pid> 
             
  JDB - Java Debug
     Requirements:
       - JDK
-          /bin/jdb
-            jdb <class> 
+          /bin/jdb <class> 
             
   
             
