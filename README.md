@@ -15,7 +15,6 @@ Java-Profiling
             /bin/jmc.ini 
                 
             /bin/jmc (sh)
-            
     
   JPS - Java Virtual Machine Proccess Status Tool
     Requirements:
@@ -32,13 +31,32 @@ Java-Profiling
   JMAP - Java Virtual Machine Memory Map
     Requirements:
       - JDK
-          /bin/jmap
-            jmap <pid>
+          /bin/jmap   [-histo:live | -heap | -dump ]
+            jmap <pid> {$jmap -dump:live,format=b,file=arquivo.hprof (ou .bin) <pid>}
             
-            
-  JMAP - Java Virtual Machine Memory Map
+    JHAT - Java Heap Analysis Tool
     Requirements:
       - JDK
-          /bin/jmap
-            jmap <pid>
+          /bin/jhat
+            jhat -J-Xmx256m arquivo.hprof 
+            
+  JSTAT - Java Virtual Machine Statistics Monitoring Tools
+    Requirements:
+      - JDK
+          /bin/jstat 
+            jstat -gccause <pid> [-class | -gc | -gcutil | -gcoldcapacity]
+            
+  JSTACK - Java Stack Trace Threads
+    Requirements:
+      - JDK
+          /bin/jstack
+            jstack <pid> 
+            
+ JDB - Java Debug
+    Requirements:
+      - JDK
+          /bin/jdb
+            jdb <class> 
+            
+  
             
